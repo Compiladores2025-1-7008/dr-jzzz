@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#define PI 3.1415926535897 
+
+/* #define PI 3.1415926535897 */
 #ifdef PI
 #define area(r) ( PI * r * r)
 #else

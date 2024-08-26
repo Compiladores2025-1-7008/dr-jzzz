@@ -1913,12 +1913,12 @@ extern int getloadavg (double __loadavg[], int __nelem)
 # 1167 "/usr/include/stdlib.h" 3 4
 
 # 3 "programa.c" 2
-# 13 "programa.c"
+# 14 "programa.c"
 
-# 13 "programa.c"
+# 14 "programa.c"
 int main ( void ) {
 printf("Hola Mundo!\n");
-float mi_area = (3.1416* 3 * 3);
+float mi_area = ( 3.1415926535897 * 3 * 3);
 printf("Resultado : %f \n", mi_area);
 return 0;
 }
