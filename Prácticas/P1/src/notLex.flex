@@ -14,7 +14,7 @@ palabra={letra}+
 espacio=[ \t\n]
 
 %%
-
+// comentario?
 {espacio} {/* La acción léxica puede ir vacía si queremos que el escáner ignore la regla*/}
 {digito}+ { System.out.print("Encontré un número: "+yytext()+"\n"); }
 {palabra} { System.out.print("Encontré una palabra: "+yytext()+"\n"); }
