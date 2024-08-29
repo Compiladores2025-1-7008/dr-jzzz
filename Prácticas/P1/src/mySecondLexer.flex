@@ -10,8 +10,12 @@
 
 digito=[0-9]
 letra=[a-zA-Z]
+inicioValido=({letra}|)
+letraHexa=[a-fA-F]
 palabra={letra}+
 espacio=[ \t\n]
+hexa=0x({letraHexa}|{digito})+
+reservada=(while|for|if|else|void)
 
 %%
 
