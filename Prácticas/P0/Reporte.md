@@ -83,3 +83,21 @@ Use tambien #ifndef, muy similar a #ifdef, pero entra a la estructura de control
 Tambien use #pragma que manda un mensaje al momento de compilar.
 
 Tambien use #error, para mandar un error y detener compilacion.
+
+### Punto Extra:
+
+- Scrt1.o
+Inicialización de entorno y pila de ejecucion
+
+- crti.o
+Inicializacion del programa.
+Incluye prologo y epiligo del programa.
+
+- crtbeginS.o
+Define constructures y destructores
+
+- crtendS.o
+Constructores y destructores
+
+- crtn.o
+Finaliza entorno de ejecucion.
