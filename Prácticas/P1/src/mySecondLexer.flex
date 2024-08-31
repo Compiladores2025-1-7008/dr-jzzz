@@ -10,15 +10,18 @@
 
 digito=[0-9]
 letra=[a-zA-Z]
-inicioValido=({letra}|)
+idChar=({letra}|{digito}|_|\$)
+inicioValido=({letra}|_|\$)
 letraHexa=[a-fA-F]
-palabra={letra}+
-espacio=[ \t\n]
+
+javaId={inicioValido}({idChar}){2,31}
+espacio=[ \t\n]+
 hexa=0x({letraHexa}|{digito})+
 reservada=(while|for|if|else|void)
 
 %%
 
-{espacio} {/* La acción léxica puede ir vacía si queremos que el escáner ignore la regla*/}
-{digito}+ { System.out.print("Encontré un número: "+yytext()+"\n"); }
-{palabra} { System.out.print("Encontré una palabra: "+yytext()+"\n"); }
+{espacio} { System.out.print("Encontré un espacio: "+yytext()+"\n");}
+{reservada} { System.out.print("Encontré una palabra reservada: "+yytext()+"\n");}
+{hexa} {System.out.print("Encontré un número hexadecimal: "+yytext()+"\n");}
+{javaId} {System.out.print("Encontré un posible identificador: "+yytext()+"\n");}
