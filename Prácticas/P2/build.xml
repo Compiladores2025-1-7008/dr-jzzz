@@ -1,0 +1,21 @@
+<project name="RunLexer" default="run" basedir=".">
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <property name="main.class" value="main.jflex.Lexer"/>
+    <property name="input.file" value="src/tst/prueba.txt"/>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <target name="compile" depends="clean">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${build.dir}"/>
+    </target>
+
+    <target name="run" depends="compile">
+        <java classname="${main.class}" fork="true" classpath="${build.dir}">
+            <arg value="${input.file}"/>
+        </java>
+    </target>
+</project>
