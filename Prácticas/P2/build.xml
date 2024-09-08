@@ -1,0 +1,12 @@
+<project name="RunLexer" default="run" basedir=".">
+    <property name="build.dir" value="build"/>
+    <property name="main.class" value="main.jflex.Lexer"/>
+    <property name="input.file" value="src/tst/prueba.txt"/>
+
+    <target name="run">
+        <mkdir dir="${build.dir}"/>
+        <java classname="${main.class}" fork="true" classpath="${build.dir}">
+            <arg value="${input.file}"/>
+        </java>
+    </target>
+</project>
