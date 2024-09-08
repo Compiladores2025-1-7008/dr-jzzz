@@ -36,23 +36,23 @@ Rpar=\)
 %%
 
 {prInt} {
-    Token actual = new Token(ClaseLexica.INT, yytext());
+    Token actual = new Token(ClaseLexica.INT, "");
     System.out.println(actual.toString());
 }
 {prFloat} {
-    Token actual = new Token(ClaseLexica.FLOAT, yytext());
+    Token actual = new Token(ClaseLexica.FLOAT, "");
     System.out.println(actual.toString());
 }
 {prIf} {
-    Token actual = new Token(ClaseLexica.IF, yytext());
+    Token actual = new Token(ClaseLexica.IF, "");
     System.out.println(actual.toString());
 }
 {prElse} {
-    Token actual = new Token(ClaseLexica.ELSE, yytext());
+    Token actual = new Token(ClaseLexica.ELSE, "");
     System.out.println(actual.toString());
 }
 {prWhile} {
-    Token actual = new Token(ClaseLexica.WHILE, yytext());
+    Token actual = new Token(ClaseLexica.WHILE, "");
     System.out.println(actual.toString());
 }
 {number} {
@@ -64,19 +64,19 @@ Rpar=\)
     System.out.println(actual.toString());
 }
 {pyc} {
-    Token actual = new Token(ClaseLexica.PYC, yytext());
+    Token actual = new Token(ClaseLexica.PYC, "");
     System.out.println(actual.toString());
 }
 {coma} {
-    Token actual = new Token(ClaseLexica.COMA, yytext());
+    Token actual = new Token(ClaseLexica.COMA, "");
     System.out.println(actual.toString());
 }
 {Lpar} {
-    Token actual = new Token(ClaseLexica.LPAR, yytext());
+    Token actual = new Token(ClaseLexica.LPAR, "");
     System.out.println(actual.toString());
 }
 {Rpar} {
-    Token actual = new Token(ClaseLexica.RPAR, yytext());
+    Token actual = new Token(ClaseLexica.RPAR, "");
     System.out.println(actual.toString());
 }
 

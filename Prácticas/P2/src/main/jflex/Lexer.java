@@ -678,19 +678,19 @@ public Token actual;
           // fall through
           case 15: break;
           case 3:
-            { Token actual = new Token(ClaseLexica.LPAR, yytext());
+            { Token actual = new Token(ClaseLexica.LPAR, "");
     System.out.println(actual.toString());
             }
           // fall through
           case 16: break;
           case 4:
-            { Token actual = new Token(ClaseLexica.RPAR, yytext());
+            { Token actual = new Token(ClaseLexica.RPAR, "");
     System.out.println(actual.toString());
             }
           // fall through
           case 17: break;
           case 5:
-            { Token actual = new Token(ClaseLexica.COMA, yytext());
+            { Token actual = new Token(ClaseLexica.COMA, "");
     System.out.println(actual.toString());
             }
           // fall through
@@ -702,7 +702,7 @@ public Token actual;
           // fall through
           case 19: break;
           case 7:
-            { Token actual = new Token(ClaseLexica.PYC, yytext());
+            { Token actual = new Token(ClaseLexica.PYC, "");
     System.out.println(actual.toString());
             }
           // fall through
@@ -714,31 +714,31 @@ public Token actual;
           // fall through
           case 21: break;
           case 9:
-            { Token actual = new Token(ClaseLexica.IF, yytext());
+            { Token actual = new Token(ClaseLexica.IF, "");
     System.out.println(actual.toString());
             }
           // fall through
           case 22: break;
           case 10:
-            { Token actual = new Token(ClaseLexica.INT, yytext());
+            { Token actual = new Token(ClaseLexica.INT, "");
     System.out.println(actual.toString());
             }
           // fall through
           case 23: break;
           case 11:
-            { Token actual = new Token(ClaseLexica.ELSE, yytext());
+            { Token actual = new Token(ClaseLexica.ELSE, "");
     System.out.println(actual.toString());
             }
           // fall through
           case 24: break;
           case 12:
-            { Token actual = new Token(ClaseLexica.FLOAT, yytext());
+            { Token actual = new Token(ClaseLexica.FLOAT, "");
     System.out.println(actual.toString());
             }
           // fall through
           case 25: break;
           case 13:
-            { Token actual = new Token(ClaseLexica.WHILE, yytext());
+            { Token actual = new Token(ClaseLexica.WHILE, "");
     System.out.println(actual.toString());
             }
           // fall through
