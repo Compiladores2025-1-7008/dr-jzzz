@@ -11,6 +11,6 @@ public class Token {
 
     @Override
     public String toString() {
-        return "<" + this.clase.getValor() + "," + this.lexema + ">";
+        return "<" + this.clase + "," + this.lexema + ">";
     }
 }
