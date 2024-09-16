@@ -9,6 +9,10 @@ public class Token {
 
     @Override
     public String toString() {
-        return "<" + this.lClass + "," + this.lexeme + ">";
+        if (this.lClass == LexicalClass.ID || this.lClass == LexicalClass.NUM_INT || this.lClass == LexicalClass.NUM_FLOAT) {
+            return "<" + this.lClass + "," + this.lexeme + ">";
+        } else {
+            return "<" + this.lClass + "," + ">";
+        }
     }
 }

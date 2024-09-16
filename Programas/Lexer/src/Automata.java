@@ -26,14 +26,19 @@ public class Automata {
     }
 
     private enum State {
-        START(false),  Q1(true),  Q2(true),  Q3(false),
-        Q4(true),  Q5(true),  Q6(true),  Q7(false),
-        Q8(true),  Q9(true),  UNDEFINED_STATE(false);
+        START(false,  LexicalClass.NOT_VALID),  Q1(true, LexicalClass.ID),
+        Q2(true, LexicalClass.WHITE_SPACE),  Q3(false, LexicalClass.NOT_VALID),
+        Q4(true, LexicalClass.SUM),  Q5(true,  LexicalClass.NUM_INT),
+        Q6(true, LexicalClass.NUM_INT),  Q7(false, LexicalClass.NOT_VALID),
+        Q8(true, LexicalClass.NUM_FLOAT),  Q9(true, LexicalClass.ASSIGN),
+        UNDEFINED_STATE(false, LexicalClass.NOT_VALID);
 
         final boolean accept;
+        final LexicalClass lexicalClass;
 
-        State(boolean accept) {
+        State(boolean accept, LexicalClass lexicalClass) {
             this.accept = accept;
+            this.lexicalClass = lexicalClass;
         }
 
         State LETTER ;
@@ -86,6 +91,10 @@ public class Automata {
 
     private State currentState = State.START;
 
+    /** Transitions to the next state based on the character class.
+     * @param c The character that the DFA is about to read.
+     * @return True if the transition is valid, false otherwise.
+     */
     public boolean transitionToValidState(char c) {
         CharClass charClass = CharClass.classify(c);
         State nextState = currentState.transition(charClass);
@@ -94,6 +103,26 @@ public class Automata {
         }
         currentState = nextState;
         return true;
+    }
+
+    /** Checks if the current state is an accept state.
+     * @return True if the current state is an accept state, false otherwise.
+     */
+    public boolean isAcceptState() {
+        return currentState.accept;
+    }
+
+    /** Resets the DFA to the start state.
+     */
+    public void reset() {
+        currentState = State.START;
+    }
+
+    /** Returns the lexical class of the current state.
+     * @return The lexical class of the current state.
+     */
+    public LexicalClass getLexicalClass() {
+        return currentState.lexicalClass;
     }
 
 }

@@ -1,3 +1,3 @@
 public enum LexicalClass {
-    ID, NUM_I, NUM_R, ASSIGN, SUM
+    ID, NUM_INT,  NUM_FLOAT,  ASSIGN, SUM, NOT_VALID, WHITE_SPACE;
 }
