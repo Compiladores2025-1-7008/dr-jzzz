@@ -6,8 +6,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Lexer {
-    private char[] charactersList;
-    private Queue<Token> tokenQueue;
+    private final char[] charactersList;
+    private final Queue<Token> tokenQueue;
     private char bufferedChar ;
     private int currentIndex;
     private final StringBuilder currentLexeme = new StringBuilder();

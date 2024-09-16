@@ -84,7 +84,6 @@ public class Automata {
                 case PLUS -> this.PLUS;
                 case DOT -> this.DOT;
                 case WHITE_SPACE -> this.WHITE_SPACE;
-                default -> UNDEFINED_STATE;
             };
         }
     }
