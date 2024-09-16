@@ -14,6 +14,7 @@ public class Lexer {
         this.charactersList = readFileToCharArray(file);
     }
 
+
     /** Reads the content of a file and returns it as a char array.
      * @param file The file to read.
      * @return The content of the file as a char array.
@@ -29,6 +30,11 @@ public class Lexer {
             return fileContent.toString().toCharArray();
         }
     }
+
+    private char bufferedChar = characterList[0];
+    private int currentIndex = 0;
+
+
 
     public char[] getCharactersList() {
         return charactersList;

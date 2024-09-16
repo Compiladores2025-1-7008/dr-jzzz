@@ -23,6 +23,9 @@ public class Main {
 
         Lexer lexer = new Lexer(inputFile);
 
+        lexer.tokenize();
+
+        lexer.getTokens().forEach(System.out::println);
 
     }
 }
