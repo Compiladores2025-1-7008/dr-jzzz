@@ -30,7 +30,7 @@ public class Automata {
         Q2(true, LexicalClass.WHITE_SPACE),  Q3(false, LexicalClass.NOT_VALID),
         Q4(true, LexicalClass.SUM),  Q5(true,  LexicalClass.NUM_INT),
         Q6(true, LexicalClass.NUM_INT),  Q7(false, LexicalClass.NOT_VALID),
-        Q8(true, LexicalClass.NUM_FLOAT),  Q9(true, LexicalClass.ASSIGN),
+        Q8(true, LexicalClass.NUM_FLOAT),
         UNDEFINED_STATE(false, LexicalClass.NOT_VALID);
 
         final boolean accept;
@@ -70,7 +70,7 @@ public class Automata {
             Q3.TWO_DOTS = Q7;
             Q5.DOT = Q8;
             Q6.ZERO =Q6; Q6.ONE_TO_NINE = Q6; Q6.DOT = Q8;
-            Q7.EQUAL = Q9;
+            Q7.EQUAL = Q4;
             Q8.ZERO = Q8; Q8.ONE_TO_NINE = Q8;
         }
 
